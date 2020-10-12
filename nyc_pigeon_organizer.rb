@@ -1,7 +1,7 @@
 require 'pry'
 
 def nyc_pigeon_organizer(data)
-  final_results = data.each_with_object ({}) do |(key,value), final_array|# write your code here!
+  final_results = data.each_with_object({}) do |(key,value), final_array|# write your code here!
   value.each do |inner_key, names|
     names.each do |name|
     if !final_array[name]
@@ -11,8 +11,8 @@ def nyc_pigeon_organizer(data)
       !final_array[name][key]=[]
     end
     final_array[name][key].push(inner_key)
-end
-end
-final_array
+    end
+  end
 end
 binding.pry
+end
